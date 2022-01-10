@@ -1,0 +1,61 @@
+/* ------------------------------------
+ #           Hero (Front-page)
+ -------------------------------------- */
+
+.edit-post-visual-editor {
+    .hero {
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        position: relative;
+        overflow: hidden;
+    }
+    
+    .hero__container {
+        @extend .-container;    
+    }
+    
+    .hero__content {
+        height: 820px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: 0 auto;
+        color: $color-lightin;
+    
+        
+        @include mediaQueriesMinMd {
+            height: 800px;
+    
+            .btn {
+                font-size: $font-h6;
+            }
+        }
+    }
+    
+    .hero__title {
+        @extend .-semiBold;
+        font-size: $font-h5;
+        line-height: 40px;
+        text-align: center;
+        margin-bottom: $spaceRg;
+    
+        @include mediaQueriesMinMd {
+            font-size: $font-h1;
+            line-height: 1.2;
+            margin-bottom: 0;
+        }
+    }
+    
+    .hero__subtitle {
+        font-size: $font-p2;
+        line-height: 40px;
+        margin-bottom: 38px;
+    
+        @include mediaQueriesMinMd {
+            font-size: $font-h6;
+        }
+    }
+}
+

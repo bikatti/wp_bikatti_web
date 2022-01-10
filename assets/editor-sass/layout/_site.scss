@@ -1,0 +1,56 @@
+
+body .wp-block-columns {
+    margin: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+*, :after, :before {
+    box-sizing: border-box;
+}
+
+body {
+    overflow-x: hidden;
+    // Scroll bar
+    &::-webkit-scrollbar {
+        background: transparent;
+        width: 10px;
+        height: 10px;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background-color: #aaa;
+        &:hover {
+            background-color: #bbb;
+        }
+    }
+
+    &::-webkit-scrollbar-track {
+        background: #ddd;
+    }
+}
+
+dl, ol, ul {
+    margin: 0;
+    padding: 0;
+}
+
+button {
+    overflow: visible;
+    border: 0;
+    font: inherit;
+    -webkit-font-smoothing: inherit;
+    letter-spacing: inherit;
+    background: none;
+    cursor: pointer;
+}
+
+blockquote {
+    margin: 0;
+}
+
+::selection {
+    background-color: $color-secondary;
+}

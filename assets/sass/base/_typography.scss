@@ -1,0 +1,161 @@
+h1, h2, h3, p, small, i, label, span, button,
+ol, li, ul, a, input, label, .-h1, .-h2, .-h3 {
+    font-family: $font1;
+    line-height: 1.5;
+    color: $color-dark;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    @include Font1Weight(7);
+}
+
+h2 {
+    font-size: $font-h2-small;
+
+    @include mediaQueriesMinMd {
+        font-size: $font-h2;
+    }
+}
+
+h3 {
+    font-size: $font-h4;
+
+    @include mediaQueriesMinMd {
+        font-size: $font-h3;
+    }
+}
+
+h4 {
+    font-size: $font-p;
+
+    @include mediaQueriesMinMd {
+        font-size: $font-h4;
+    }
+}
+
+p {
+    font-size: $font-p;
+    line-height: 1.7;
+}
+
+
+// Styles
+.-uppercase {
+    text-transform: uppercase;
+}
+.-black {
+    @include Font1Weight(9);
+}
+.-extraBold {
+    @include Font1Weight(8);
+}
+.-bold {
+    @include Font1Weight(7);
+}
+.-semiBold {
+    @include Font1Weight(6);
+}
+.-medium {
+    @include Font1Weight(5);
+}
+.-regular {
+    @include Font1Weight(4);
+}
+.-light {
+    @include Font1Weight(3);
+}
+.-extraLight {
+    @include Font1Weight(2);
+}
+.-thin {
+    @include Font1Weight(1);
+}
+
+
+.-italic {
+    font-style: italic;
+}
+.-center {
+    text-align: center;
+}
+.-condensed {
+    letter-spacing: -1px;
+}
+.-semiBoldCondensed {
+    letter-spacing: -0.35px;
+}
+
+// Font
+.-loose {
+    letter-spacing: .16px;
+}
+
+// Color
+.-colorLightin {
+    color: $color-lightin;
+}
+
+// Line-clamp
+.-lineClampTitle {
+    @include lineClamp(2);
+}
+.-lineClampTitleLong {
+    @include lineClamp(4);
+}
+.-lineClampText {
+    @include lineClamp(3);
+}
+
+
+.list--check {
+    list-style: none;
+
+    li {
+        font-size: $font-p2;
+        position: relative;
+        margin-left: 40px;
+        padding-bottom: 12px;
+        color: $color-graydark;
+
+        &::before {
+            content: url('assets/img/icons/check.svg');
+            display: inline-block;
+            width: 24px;
+            height: 24px;
+            position: absolute;
+            left: -35px;
+        }
+    }
+}
+
+
+// Titles
+.byline {
+    @extend .-regular;
+    font-family: $font1 !important;
+    font-size: 12px;
+    line-height: 1;
+    color: $color-calm;
+    text-transform: uppercase;
+    margin-bottom: $space0;
+
+    .change-color & {
+        color: $color-dark;
+    }
+}
+
+.qoute-center {
+    @extend .-black;
+    font-family: $font2;
+    font-size: $font-p;
+    margin: 0 auto !important;
+    color: $color-black;
+    letter-spacing: -0.01em;
+    text-align: center;
+    line-height: 1.1;
+    max-width: 570px;
+
+    @include mediaQueriesMinMd {
+        font-size: $font-h3 !important;
+    }
+}

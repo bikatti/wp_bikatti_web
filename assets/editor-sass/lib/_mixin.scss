@@ -1,0 +1,102 @@
+// MediaQueries max-width
+@mixin mediaQueriesXl {
+    @media only screen and (max-width: $breakXl) {
+        @content;
+    }
+}
+@mixin mediaQueriesLg {
+    @media only screen and (max-width: $breakLg) {
+        @content;
+    }
+}
+
+@mixin mediaQueriesMd {
+    @media only screen and (max-width: $breakMd) {
+        @content;
+    }
+}
+
+@mixin mediaQueriesSm {
+    @media only screen and (max-width: $breakSm) {
+        @content;
+    }
+}
+
+@mixin mediaQueriesXs {
+    @media only screen and (max-width: $breakXs) {
+        @content;
+    }
+}
+
+@mixin mediaQueriesXxs {
+    @media only screen and (max-width: $breakXxs) {
+        @content;
+    }
+}
+
+@mixin mediaQueries0 {
+    @media only screen and (max-width: $break0) {
+        @content;
+    }
+}
+
+// MediaQueries min-width
+@mixin mediaQueriesMinXl {
+    @media only screen and (min-width: $breakXl) {
+        @content;
+    }
+}
+@mixin mediaQueriesMinLg {
+    @media only screen and (min-width: $breakLg) {
+        @content;
+    }
+}
+
+@mixin mediaQueriesMinMd {
+    @media only screen and (min-width: $breakMd) {
+        @content;
+    }
+}
+
+@mixin mediaQueriesMinSm {
+    @media only screen and (min-width: $breakSm) {
+        @content;
+    }
+}
+
+@mixin mediaQueriesMinXs {
+    @media only screen and (min-width: $breakXs) {
+        @content;
+    }
+}
+
+@mixin mediaQueriesMinXxs {
+    @media only screen and (min-width: $breakXxs) {
+        @content;
+    }
+}
+
+@mixin mediaQueriesMin0 {
+    @media only screen and (min-width: $break0) {
+        @content;
+    }
+}
+
+// Weight
+@mixin Font1Weight($weight: 5) {
+    font-family: $font1;
+    font-weight: ($weight) * 100;
+}
+
+// OverFlow
+@mixin Overflow($status: hidden) {
+    overflow: $status;
+}
+
+// Line-clamp
+@mixin lineClamp($number) {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: $number;
+    overflow: hidden;
+}

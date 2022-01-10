@@ -1,0 +1,90 @@
+/* ------------------------------------
+ #               Benefits
+ -------------------------------------- */
+
+.edit-post-visual-editor {
+    .benefits__content {
+        display: flex;
+        align-items: center;
+    
+        @include mediaQueriesMd {
+            flex-direction: column;
+        }
+    }
+
+    
+    .benefits__img {
+        max-width: 100vw;
+
+        &.wp-block-image {
+            margin: 0;
+        }
+    
+        @include mediaQueriesMinMd {
+            max-width: 45vw;
+        }
+    }
+    
+    .benefits__texts {
+        padding: 70px 27px 60px;
+        color: $color-dark;
+    
+        @include mediaQueriesMinMd {
+            padding: 0 20px;
+            margin-top: 80px;
+            margin-left: 100px;
+        }
+    }
+    
+    .benefits__title {
+        @extend .-semiBold;
+        font-size: $font-h6;
+        line-height: 40px;
+        margin-bottom: 30px;
+    
+        @include mediaQueriesMinMd {
+            font-size: $font-h4;
+            margin-bottom: 38px;
+        }
+    }
+    
+    .benefits__list {
+        position: relative;
+        max-width: 590px;;
+    
+        li {
+            @extend .-medium;
+            list-style: none;
+            margin-left: 10px;
+            margin-bottom: 60px;
+            font-size: $font-small;
+            line-height: normal;
+        
+            &::before {
+                content: url('assets/img/icon.svg');
+                display: block;
+                width: 20px;
+                height: 20px;
+                position: absolute;
+                left: 0;
+                margin: 0 5px 0;
+            }
+        
+        }
+    
+    
+        @include mediaQueriesMinMd {
+    
+            li {
+                font-size: $font-p;
+        
+                &::before {
+                    width: 24px;
+                    height: 24px;
+                }
+            }
+    
+        }
+    }
+}
+

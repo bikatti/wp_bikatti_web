@@ -1,0 +1,44 @@
+/*
+Theme Name: DEP (Theme Child)
+Author: ALAXA TECH
+Author URI: https://github.com/ALAXA-TECH
+Template: base-theme
+Description: Sitio web de 'DEP'
+Requires PHP: 5.7
+Version: 0.2.16
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Tags: Landing page, DEP, Sitio Web, Escuelas
+*/
+
+
+// lib
+// @import "lib/fonts";
+@import "lib/var";
+@import "lib/mixin";
+
+// layout
+@import "layout/bootstrap_reboot";
+@import "layout/site";
+@import "layout/grid";
+
+// base
+@import "base/typography";
+@import "base/links";
+@import "base/buttons";
+// @import "base/animation";
+@import "base/icons";
+
+// Page & Custom Post Type
+// @import "components/header";
+@import "components/card";
+@import "components/library";
+
+// Home
+@import "components/carousel-keys";
+@import "components/featured-news";
+@import "components/slep";
+@import "components/info-public";
+@import "components/footer";
+
+

@@ -1,0 +1,28 @@
+/* ------------------------------------
+ #          Gutenberg Editor
+ -------------------------------------- */
+
+.edit-post-visual-editor {
+    .editor-styles-wrapper {
+        padding: 0;
+    }
+
+    .wp-block {
+        max-width: 100%;
+    }
+
+    // Title of the post
+    .edit-post-visual-editor__post-title-wrapper .editor-post-title {
+        margin: $spaceMd $spaceMd 0;
+    }
+    .editor-post-title__input {
+        font-family: $font1;
+    }
+
+    // Buttons
+    .wp-block-button {
+        margin-top: 0;
+        padding: 0;
+        background-color: transparent;
+    }
+}

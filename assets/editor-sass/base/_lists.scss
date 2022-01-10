@@ -1,0 +1,85 @@
+// List
+ol {
+    padding: 0;
+}
+li {
+    list-style: none;
+}
+
+.-counterContainer ol {
+    counter-reset: myCounter;
+}
+
+.m-listContent {
+    position: relative;
+    // margin-left: $spaceXs;
+    &.-arrow li {
+        list-style: none;
+        margin-left: $spaceSm;
+        &::before {
+            display: block;
+            width: 18px;
+            position: absolute;
+            left: 0;
+            margin: 2px 5px 0;
+            content: url('../img/icons/arrow_right@0.5.svg');
+        }
+    }
+    &.-check li {
+        list-style: none;
+        margin-left: 25px;
+        &::before {
+            display: block;
+            width: 20px;
+            position: absolute;
+            left: $spaceXs;
+            content: url('../img/icons/arrow_right.svg');
+        }
+    }
+    &.-counter li {
+        list-style: none;
+        margin-left: $spaceSm;
+        &::before {
+            width: 22px;
+            height: 22px;
+            // margin: 2px 10px;
+            display: block;
+            position: absolute;
+            left: -5px;
+            counter-increment: myCounter;
+            content: counter(myCounter);
+            border-radius: 50%;
+            font-size: $fontS1;
+            color: $color-lightin;
+            font-weight: 600;
+            line-height: 21px;
+            text-align: center;
+            transition: all .2s;
+            background-color: $color-secondary;
+        }
+    }
+}
+.m-linksList {
+    padding-left: 0;
+    position: relative;
+    a {
+        padding: 4px $spaceXs 4px $spaceXs;
+        border-radius: 4px;
+        transition: background 120ms ease-in 0s;
+        text-overflow: ellipsis;
+        max-width: 100%;
+        overflow: hidden;
+        white-space: nowrap;
+    }
+    a:hover {
+        background: $color-lightgrey;
+        color: $color-darkengrey;
+    }
+}
+.m-listFooter {
+    position: relative;
+    li {
+        list-style: none;
+        margin-bottom: 3px;
+    }
+}

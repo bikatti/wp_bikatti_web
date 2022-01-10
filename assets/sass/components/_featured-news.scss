@@ -1,0 +1,132 @@
+/* ------------------------------------
+ #           Featured News
+ -------------------------------------- */
+
+.featured-news {
+    position: relative;
+}
+
+.featured-news__container {
+    @extend .container-min-md;
+}
+
+.featured-news__content {
+    background-color: $color-calm;
+    box-shadow: 0px 30px 60px rgba(58, 191, 240, 0.2);
+    padding: 30px 0 50px;
+
+    .change-color & {
+        background-color: $color-black;
+        box-shadow: 0px 30px 60px rgba(0, 0, 0, 0.2);
+    }
+    
+    h3 {
+        font-family: $font2;
+        font-weight: 900;
+        line-height: 1.1;
+        font-size: $font-h4;
+        padding: 0 15px;
+        color: $color-lightin;
+        margin-bottom: 15px;
+    }
+    
+    @include mediaQueriesMinMd {
+        padding: 40px 0;
+        padding-left: 58px;
+        // padding: 40px 40px 40px 58px;
+        border-radius: 20px;
+        
+        h3 {
+            font-size: 36px;
+            padding: 0;
+            margin-bottom: 30px;
+        }
+    }
+}
+
+.splide--featured {
+    .splide__pagination {
+        position: static;
+        padding: 0;
+        margin-top: 40px;
+        justify-content: start;
+        gap: 5px;
+    }
+
+    .splide__pagination__page  {
+        background-color: $color-lightin;
+        height: 5px;
+        width: 5px;
+
+        &.is-active {
+            background-color: $color-secondary;
+            transform: scale(2);
+
+            .change-color & {
+                background-color: $color-dark;
+            }
+        }
+    }
+
+    
+    @include mediaQueriesMd {
+        .splide__track {
+            overflow: scroll;
+            padding: 0 15px !important;
+        }
+    }
+}
+
+.splide__arrow {
+    background-color: transparent;
+    opacity: 1;
+    top: auto;
+    bottom: -27px;
+
+    &--prev {
+        left: auto;
+        right: 5em;
+    }
+
+    &--next {
+        right: 2em;
+    }
+
+    .splide__arrow-left,
+    .splide__arrow-right {
+        content: '';
+        display: inline-block;
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+        width: 40px;
+        height: 16px;
+        background-image: url(assets/img/icons/arrow-on.svg);
+        transition: background-image 400ms ease-in, transform 0s;
+    }
+    
+    .splide__arrow-right {
+        transform: rotate(180deg);
+    }
+    
+    &[disabled] .splide__arrow-left {
+        transform: rotate(180deg);
+    }
+
+    &[disabled] .splide__arrow-right {
+        transform: rotate(0);
+    }
+
+    &[disabled] .splide__arrow-right,
+    &[disabled] .splide__arrow-left {
+        background-image: url(assets/img/icons/arrow-off.svg);
+        cursor: default;
+    }
+}
+
+.splide__arrows {
+    display: none;
+
+    @include mediaQueriesMinMd {
+        display: block;
+    }
+}

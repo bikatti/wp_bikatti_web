@@ -1,0 +1,53 @@
+/* ------------------------------------
+ #      Register Business Section
+ -------------------------------------- */
+
+.edit-post-visual-editor {
+
+    .register-business {
+        margin-top: 87px;
+        margin-bottom: 92px;
+    
+        @include mediaQueriesMinMd {
+            margin-top: 50px;
+            margin-bottom: 50px;
+        }
+    }
+    
+    .register-business__container {
+        @extend .-container;
+    }
+    
+    .register-business__content {
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+        
+        @include mediaQueriesMinMd {
+            flex-direction: row;
+            gap: 33px;
+            align-items: center;
+        }
+    }
+    
+    .register-business__title {
+        @extend .-semiBold;
+        font-size: $font-h6;
+        line-height: auto;
+        margin-bottom: 20px;
+    
+        @include mediaQueriesMinMd {
+            font-size: $font-h4;
+            margin-bottom: 30px;
+        }
+    }
+    
+    .register-business__text {
+        margin-bottom: $spaceXl;
+    }
+    
+    .register-business__img {
+        max-width: 550px;
+    }
+    
+}

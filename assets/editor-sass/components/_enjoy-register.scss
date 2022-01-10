@@ -1,0 +1,43 @@
+/* ------------------------------------
+ #            Enjoy register
+ -------------------------------------- */
+
+.edit-post-visual-editor {
+
+    .enjoy-register {
+        background-color: $color-secondary;
+        padding-top: 115px;
+        padding-bottom: 115px;
+    
+        @include mediaQueriesMinMd {
+            padding-top: 123px;
+            padding-bottom: 123px;
+        }
+    }
+    
+    .enjoy-register__container {
+        @extend .-container;
+    }
+    
+    .enjoy-register__cta {
+        @extend .-regular;
+        color: $color-lightin;
+        font-size: $font-h5;
+        line-height: 40px;
+        text-align: center;
+        
+        strong {
+            @extend .-semiBold;
+        }
+    
+        @include mediaQueriesMinMd {
+            font-size: $font-h3;
+        }
+    
+        @include mediaQueriesMd {
+            max-width: 70%;
+            margin: 0 auto;
+        }
+    }
+    
+}

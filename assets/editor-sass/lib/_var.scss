@@ -1,0 +1,60 @@
+// colors
+$color-primary: #FA8B20;
+$color-secondary: #00C4D4;
+$color-bluedark: #183A44;
+$color-calm: #FEF3E9;
+
+// colors grey
+$color-lightin: #fff;
+$color-lightgrey: #F9F9F9;
+$color-grey: #668998;
+$color-greyplus: #ccc;
+$color-dark: #000;
+
+// fonts
+$font1: 'Poppins', sans-serif;
+
+// font-size
+$font-h1: 50px;
+$font-h2: 50px;
+$font-h3: 40px;
+$font-h4: 35px;
+$font-h5: 25px;
+$font-h6: 20px;
+$font-p: 17px;
+$font-p2: 16px;
+$font-small: 15px;
+
+// Border
+$borderBottom: 1px solid $color-grey;
+
+// Breakpoints
+$breakXl: 1200px;
+$breakLg: 992px;
+$breakMd: 768px;
+$breakSm: 576px;
+$breakXs: 425px;
+$breakXxs: 375px;
+$break0: 320px;
+
+// Spaces
+$spaceXl: 50px;
+$spaceBg: 40px;
+$spaceMd: 30px;
+$space25: 25px;
+$spaceRg: 20px;
+$spaceSm: 15px;
+$spaceXs: 10px;
+$spaceXxs: 8px;
+$space0: 5px;
+
+// z-index status
+$super: 1000;
+$parent: 500;
+$child: 100;
+$friend: 50;
+$guest: 1;
+$anonymous: -1;
+
+// Shadow
+$shadow: 0px $spaceSm $spaceRg rgb(0 0 0 / 20%);

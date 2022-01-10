@@ -1,0 +1,64 @@
+ // colors
+$color-primary: #FF3C4C;
+$color-secondary: #1F84EC;
+$color-calm: #3ABFF0;
+$color-success: #90D039;
+$color-bright: #F8D63C;
+
+// colors grey
+$color-lightin: #fff;
+$color-lightgrey: #F1F1F1;
+$color-gray: #CACACA;
+$color-graydark: #888888;
+$color-black: #282828;
+$color-dark: #000;
+
+// fonts
+$font1: 'Inter', sans-serif;
+$font2: 'Gilmer', sans-serif;
+
+// font-size
+$font-h1: 5.625rem;
+$font-h2: 3rem;
+$font-h2-small: 2.3125rem;
+$font-h3: 2.25rem;
+$font-h3-small: 1.875rem;
+$font-h4: 1.5rem;
+$font-h5: 1.375rem;
+$font-h6: 1.25rem;
+$font-p: 1rem;
+$font-p2: 0.9375rem;
+$font-small: 0.875rem;
+$font-tiny: 0.8125rem;
+
+// Border
+$borderBottom: 1px solid $color-gray;
+
+// Breakpoints
+$breakXl: 1200px;
+$breakLg: 992px;
+$breakMd: 768px;
+$breakSm: 576px;
+$breakXs: 425px;
+$breakXxs: 375px;
+$break0: 320px;
+
+// Spaces
+$spaceXl: 50px;
+$spaceBg: 40px;
+$spaceMd: 30px;
+$space25: 25px;
+$spaceRg: 20px;
+$spaceSm: 15px;
+$spaceXs: 10px;
+$spaceXxs: 8px;
+$space0: 5px;
+
+// z-index status
+$super: 1000;
+$parent: 10;
+$guest: 1;
+$anonymous: -1;
+
+// Shadow
+$shadow: 0px $spaceSm $spaceRg rgb(0 0 0 / 20%);

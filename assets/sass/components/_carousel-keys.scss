@@ -1,0 +1,161 @@
+/* ------------------------------------
+ #            Carousel Keys
+ -------------------------------------- */
+
+.carousel-keys {
+    position: relative;
+    padding-bottom: 80px;
+
+    @include mediaQueriesMinMd {
+        padding-bottom: 130px;
+    }
+}
+
+.carousel-keys__container {
+    @extend .container-min-md;
+}
+
+.carousel-keys__content {
+    gap: 80px;
+
+    h2 {
+        font-family: $font2;
+        font-weight: 900;
+        line-height: 1.1;
+        margin-bottom: 12px;
+        color: $color-black;
+    }
+
+    .splide__slide {
+        width: 100%;
+    }
+
+    
+    .splide__arrows {
+        display: block;
+    }
+
+    .splide__arrow {
+        bottom: 10px;
+
+        .splide__arrow--prev {
+            right: 5em;
+        }
+
+        .splide__arrow--next {
+            right: 2em;
+        }
+
+        .splide__arrow-left,
+        .splide__arrow-right {
+            background-image: url(assets/img/icons/arrow-carousel.svg);
+        }
+
+        &[disabled] .splide__arrow-right,
+        &[disabled] .splide__arrow-left {
+            background-image: url(assets/img/icons/arrow-carousel.svg);
+            opacity: .6;
+        }
+
+        .splide__arrow-left {
+            transform: rotate(180deg);
+        }
+
+        .splide__arrow-right {
+            transform: rotate(0);
+        }
+        
+        &[disabled] .splide__arrow-left {
+            transform: rotate(180dg);
+        }
+    
+        &[disabled] .splide__arrow-right {
+            transform: rotate(0);
+        }
+    }
+
+    @include mediaQueriesMd {
+        .carousel-keys__text {
+            padding-right: 15px;
+            padding-left: 15px;
+        }
+    }
+
+    @include mediaQueriesMinMd {
+        gap: 90px;
+
+        p {
+            max-width: 330px;
+            color: $color-black;
+        }
+
+        .splide__arrow {
+            top: 65%;
+            bottom: auto;
+        }
+    }
+}
+
+.carousel-keys__item {
+    figure {        
+        position: relative;
+        img {
+            min-height: 550px;
+            max-height: 550px;
+            width: 100%;
+            object-fit: cover;
+        }
+
+        &::after {
+            content: '';
+            display: block;
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(180deg, rgba(40, 40, 40, 0) 30.35%, #282828 100%);
+            opacity: 0.8;
+        }
+    }
+    
+    .carousel-keys__body {
+        position: absolute;
+        left: 18px;
+        right: 18px;
+        bottom: 40px;
+
+        h3 {
+            max-width: 290px;
+            color: $color-lightin;
+        }
+
+        p {
+            font-weight: 400;
+            color: $color-lightin;
+        }
+    }
+
+    @include mediaQueriesMinMd {
+        figure {
+            img {
+                border-radius: 20px;
+                min-height: 550px;
+                max-height: 550px;
+            }
+            
+            &::after {
+                border-radius: 20px;
+            }
+        }
+
+        .carousel-keys__body {
+            left: 30px;
+            right: auto;
+
+            h3 {
+                max-width: 340px;
+            }
+        }
+    }
+}

@@ -1,0 +1,160 @@
+/* ------------------------------------
+ #           Contact Form
+ -------------------------------------- */
+
+.contact__container {
+    @extend .-container;
+}
+
+.wpcf7-form {
+    p {
+        margin: 0;
+    }
+
+    .contact__form { 
+
+        label {
+            width: 100%;
+            font-size: $font-p;
+            color: $color-black;
+            margin-bottom: 40px;
+        }
+    
+        input:not([type=checkbox]), select, textarea {
+            margin-top: 5px;
+            width: 100%;
+            background-color: $color-lightin;
+            border-radius: 6px;
+            border: 2px solid $color-calm;
+            font-size: $font-p;
+            padding: 16px 16px 13px;
+            color: $color-black;
+            line-height: 1.1;
+            box-shadow: 0px 4px 8px rgba(44, 39, 56, 0.04);
+    
+            &:focus-visible {
+                outline: none;
+            }
+        }
+    
+        .wpcf7-list-item {
+            margin: 0 !important;
+        }
+        
+        .wpcf7-list-item-label {
+            font-size: $font-tiny;
+            margin-left: 10px;
+        }
+        
+    }
+
+    .wpcf7-form-control.wpcf7-submit {
+        @extend .-medium;
+        border: none;
+        cursor: pointer;
+        outline: none;
+        font-size: $font-p;
+        line-height: 1;
+        padding: 18px 50px;
+        border-radius: 6px;
+        display: block;
+        color: $color-lightin !important;
+        background-color: $color-calm;
+        transition: all 0.3s ease-in-out;
+        margin-top: 20px;
+        margin-left: auto;
+
+        &:hover {
+            opacity: .9;
+        }
+    }
+    
+    .wpcf7-spinner {
+        display: none;
+    }
+
+    br {
+        display: none;
+    }
+}
+
+
+.page--contact {
+    .wpcf7 {
+        margin-top: 50px;
+    }
+
+    .wpcf7-form {
+        max-width: 770px;
+    }
+
+    @include mediaQueriesMd {
+        .wpcf7-form {
+            border-radius: 0;
+            box-shadow: none;
+            padding: 0;
+        }
+    }
+}
+
+.swal-icon {
+    margin: 0 auto;
+    margin-top: 33px;
+    margin-bottom: 15px;
+    border: none;
+
+    div, span {
+        display: none;
+    }
+
+    &::before {
+        content: "";
+        display: inline-block;
+        position: relative;
+        border-radius: 0;
+        top: auto;
+        left: auto;
+        transform: none;
+
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+        width: 80px;
+        height: 80px;
+        background-image: url('assets/img/icons/check.svg');
+        transition: all .4s;
+        // bottom: 17px;
+        // right: 0;
+    }
+
+    &::after {
+        content: none;
+    }
+}
+
+.wpcf7-form {
+    background-color: $color-lightin;
+    box-shadow: 0px 10px 30px rgba(44, 39, 56, 0.1);
+    border-radius: 20px;
+    padding: 48px 52px 40px 40px;
+}
+
+.swal-modal {
+    border-radius: 20px;
+}
+
+.swal-title {
+    @extend .-black;
+    display: block;
+    font-family: $font2;
+    font-size: $font-h4;
+    line-height: 1.2;
+    color: $color-dark;
+    margin-bottom: 15px;
+}
+
+.swal-text {
+    font-size: $font-p;
+    line-height: 1.4;
+    color: $color-dark;
+    margin-bottom: 40px;
+}

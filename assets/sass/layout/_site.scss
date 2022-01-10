@@ -1,0 +1,141 @@
+
+body .wp-block-columns {
+    margin: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+    font-size: 16px;
+}
+
+*, :after, :before {
+    box-sizing: border-box;
+}
+
+* {
+    // Scroll bar
+    &::-webkit-scrollbar {
+        background: transparent;
+        width: 10px;
+        height: 10px;
+    }
+    
+    &::-webkit-scrollbar-thumb {
+        background-color: #aaa;
+        
+        &:hover {
+            background-color: #bbb;
+        }
+    }
+    
+    &::-webkit-scrollbar-track {
+        background: #ddd;
+    }
+}
+
+body {
+    overflow-x: hidden;
+
+    // Placeholders of the site
+    ::placeholder { 
+        color: $color-gray;
+        opacity: 1;
+    }
+    
+}
+
+dl, ol, ul {
+    margin: 0;
+    padding: 0;
+}
+
+button {
+    overflow: visible;
+    border: 0;
+    font: inherit;
+    -webkit-font-smoothing: inherit;
+    letter-spacing: inherit;
+    background: none;
+    cursor: pointer;
+}
+
+blockquote {
+    margin: 0;
+}
+
+::selection {
+    background-color: $color-black;
+    color: $color-lightin;
+}
+
+input {
+    &:focus-visible {
+        outline: none;
+    }
+}
+
+summary {
+    list-style: none;
+    list-style-type: none;
+
+    &::-webkit-details-marker,
+    details > &::-webkit-details-marker {
+        display: none;
+    }
+
+    &::marker,
+    details > &::marker {
+        display:none;
+    }
+
+    &:hover, &:focus, &:active {
+        outline: none;
+    }
+}
+
+details > summary {
+    list-style: none;
+    list-style-type: none;
+}
+
+hr {
+    border-top: none !important;
+    border-bottom: 1px solid #c4c4c4 !important;
+}
+  
+
+// --- Margin Scroll ---
+* {
+    scroll-margin-top: 150px;
+}
+
+
+.theBody {
+    @include mediaQueriesMinMd {
+        position: relative;
+
+        &::before {
+            content: '';
+            display: block;
+            // background-size: 100% 100%;
+            background-repeat: no-repeat;
+            background-position: top center;
+            width: 100%;
+            height: -webkit-fill-available;
+            position: absolute;
+            top: -20px;
+            right: 0;
+            left: 0;
+            z-index: -1;
+            // opacity: .3;
+            background-image: url('assets/img/bg/bg-lines.svg');
+            background-color: $color-lightin;
+        }
+    }
+
+    @media only screen and (min-width: 1700px) {
+        &::before {
+            top: -20px;
+        }
+    }
+}

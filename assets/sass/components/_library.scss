@@ -1,0 +1,19 @@
+/* ------------------------------------
+ #              Library
+ -------------------------------------- */
+
+.library__container {
+    @extend .container;
+}
+
+.library__content {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    
+    @include mediaQueriesMinMd {
+        display: grid;
+        grid: auto / repeat(2, 1fr);
+        gap: 45px 30px;
+    }
+}

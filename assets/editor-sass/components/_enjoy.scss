@@ -1,0 +1,53 @@
+/* ------------------------------------
+ #            Enjoy Section
+ -------------------------------------- */
+
+.edit-post-visual-editor {
+    .enjoy {
+        background-image: url('assets/img/enjoy-sm.png');
+        background-position: top;
+        background-repeat: no-repeat;
+        background-size: cover;
+        border-top-left-radius: 100px;
+        border-bottom-left-radius: 100px;
+    
+        @include mediaQueriesMinMd {
+            background-image: url('assets/img/enjoy-md.png');
+            background-position: center;
+            border-top-left-radius: 200px;
+            border-bottom-left-radius: 200px;
+        }
+    }
+    
+    .enjoy__container {
+        @extend .-container;
+        padding-top: 75px;
+        padding-bottom: 75px;
+    
+        @include mediaQueriesMinMd {
+            padding-top: 130px;
+            padding-bottom: 130px;
+        }
+    }
+    
+    .enjoy__cta {
+        @extend .-regular;
+        color: $color-lightin;
+        font-size: $font-h5;
+        line-height: 40px;
+        text-align: center;
+        
+        strong {
+            @extend .-semiBold;
+        }
+    
+        @include mediaQueriesMinMd {
+            font-size: $font-h3;
+        }
+    
+        @include mediaQueriesMd {
+            max-width: 70%;
+            margin: 0 auto;
+        }
+    }
+}

@@ -1,0 +1,51 @@
+/* ------------------------------------
+ #             Who Are We
+ -------------------------------------- */
+
+.edit-post-visual-editor {
+    .who-are-we {
+        margin-top: 89px;
+        margin-bottom: 119px;
+    
+        @include mediaQueriesMinMd {
+            margin-top: 110px;
+            margin-bottom: 122px;
+        }
+    }
+    
+    .who-are-we__container {
+        @extend .-container;
+    }
+    
+    .who-are-we__content {
+        width: 100%;
+        max-width: 740px;
+        margin: 0 auto;
+        text-align: center;
+    }
+    
+    .who-are-we__title {
+        @extend .-semiBold;
+        font-size: $font-h6;
+        line-height: 40px;
+        margin-bottom: $spaceBg;
+    
+        @include mediaQueriesMinMd {
+            font-size: $font-h4;
+        }
+    }
+    
+    .who-are-we__text {
+        p {
+            font-size: $font-p2;
+            line-height: 30px;
+            margin-bottom: 30px;
+        }
+    
+        @include mediaQueriesMinMd {
+            p {
+                font-size: $font-p;
+            }
+        }
+    }
+}

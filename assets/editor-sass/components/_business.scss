@@ -1,0 +1,126 @@
+/* ------------------------------------
+ #          Business Section
+ -------------------------------------- */
+
+.edit-post-visual-editor {
+    .business {
+        background-color: $color-primary;
+        position: relative;
+        padding-top: 45px;
+        padding-bottom: 56px;
+    
+        &.business--categories {
+            background-color: $color-secondary;
+            padding-top: 115px;
+            padding-bottom: 205px;
+        }
+    
+        @include mediaQueriesMinMd {
+            padding-top: 87px;
+            padding-bottom: 87px;
+    
+            &.business--categories {
+                padding-top: 194px;
+            }
+        }
+    }
+    
+    .business__container {
+        @extend .-container;
+    }
+    
+    .business__content {
+        color: $color-lightin;
+    
+        .splide {
+            margin-left: 20px;
+        }
+    
+        .business__arrow {
+            background-color: $color-lightin;
+            opacity: 1;
+    
+            svg {
+                fill: $color-primary;
+            }
+            
+            .business--categories & svg{
+                fill: $color-secondary;
+            }
+        }
+    
+        .business__arrow--prev {
+            left: -1em;
+        }
+        
+        .business__arrow--next {
+            right: -.5rem;
+        }
+    
+        .splide__list {
+            align-items: center;
+        }
+    
+        img {
+            max-width: 140px;
+        }
+    
+        @include mediaQueriesMinMd {
+            .splide {
+                margin-left: 0;
+            }
+    
+            .business__arrow--prev {
+                left: -3em;
+            }
+            
+            .business__arrow--next {
+                right: -3em;
+            }
+    
+            img {
+                max-width: 157px;
+            } 
+        }
+    }
+    
+    .business__title {
+        @extend .-semiBold;
+        font-size: $font-h5;
+        line-height: 40px;
+        margin-bottom: 30px;
+    
+        .business--categories & {
+            font-size: $font-h6;
+            margin-bottom: 0;
+        }
+        
+        @include mediaQueriesMinMd {
+            .business--categories & {
+                font-size: $font-h4;
+                margin-bottom: 13px;
+            }
+        }
+    }
+    
+    .business__subtitle {
+        @extend .-semiBold;
+        font-size: $font-p;
+        margin-bottom: 45px;
+    
+        @include mediaQueriesMinMd {
+            font-size: $font-h5;
+        }
+    }
+    
+    .business__text {
+        @extend .-medium;
+        font-size: $font-h5;
+        margin-bottom: 38px;
+    
+        @include mediaQueriesMinMd {
+            font-size: $font-h5;
+            margin-bottom: 30px;
+        }
+    }
+}

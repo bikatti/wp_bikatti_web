@@ -1,0 +1,86 @@
+/* ------------------------------------
+ #                Card
+ -------------------------------------- */
+
+.card--document {
+    &.color-line--verde {
+        .byline {
+            color: $color-success;
+        }
+
+        .color-line {
+            background: $color-success;
+        }
+
+        .btn--without a {
+            color: $color-success !important;
+
+            &::after {
+                background: $color-success;
+            }
+        }
+    }
+
+    .byline {
+        color: $color-primary;
+    }
+
+    .card__line {
+        margin: 0;
+    }
+
+    .color-line {
+        width: 12px;
+        height: 100%;
+        background: $color-primary;
+        border-top-left-radius: 10px;
+        border-bottom-left-radius: 10px;
+    }
+
+    .btn--without a {
+        color: $color-primary !important;
+
+        &::after {
+            background: $color-primary;
+        }
+    }
+    .card__wrap {
+        flex-direction: row;
+    }
+
+    .card__header {
+        flex-basis: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    
+    .btn--arrow a {
+        position: relative;
+        text-align: left;
+        width: 100%;
+        
+        &::after {
+            margin-right: 0;
+            bottom: 0;
+        }
+    }
+    
+    @include mediaQueriesMinMd {
+        .card__wrap {
+            height: 100%;
+            max-height: 265px;
+        }
+        
+        .card__content, h4 {
+            @include lineClamp(2);
+        }
+        
+        .btn--arrow a {    
+            &::after {
+                right: -20px;
+            }
+        }
+    }
+}

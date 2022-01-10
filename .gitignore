@@ -1,0 +1,5 @@
+prepros.config
+*.png
+*.jpg
+node_modules/
+

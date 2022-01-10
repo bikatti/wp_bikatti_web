@@ -1,0 +1,40 @@
+.btn {
+    margin-bottom: 0 !important;
+
+    div {
+        @extend .-semiBold;
+        cursor: pointer;
+        outline: none;
+        font-size: $font-p;
+        line-height: 30px;
+        padding: 13px 60px;
+        box-shadow: 0px 0px 5px #E3C6AB;
+        border-radius: 10px;
+        text-decoration: none !important;
+        color: $color-lightin !important;
+    }
+}
+
+.btn--primary {
+    div {
+        background-color: $color-primary;
+    }
+}
+
+.btn--secondary {
+    div {
+        background-color: $color-secondary;
+    }
+}
+
+.btn--arrow div {
+    position: relative;
+
+    &::after {
+        content: url('assets/img/arrow-btn.svg');
+        display: block;
+        position: absolute;
+        top: 21px;
+        right: 25px;
+    }
+}

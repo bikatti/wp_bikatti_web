@@ -1,0 +1,9 @@
+a {
+    font-family: $font1;
+    font-size: $font-p;
+    line-height: 30px;
+    
+    &:hover {
+        text-decoration: none;
+    }
+}

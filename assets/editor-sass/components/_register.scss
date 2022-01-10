@@ -1,0 +1,28 @@
+/* ------------------------------------
+ #               Register
+ -------------------------------------- */
+
+.edit-post-visual-editor {
+    .register {
+        margin-top: 60px;
+        
+        @include mediaQueriesMinMd {
+            margin-top: 90px;
+            margin-bottom: 20px;
+        }
+    }
+    
+    .register__container {
+        @extend .-container;
+    }
+    
+    .register__content {
+        width: 100%;
+        min-height: 1650px;
+        overflow: hidden;
+    
+        @include mediaQueriesMinMd {
+            min-height: 1350px;
+        }
+    }
+}

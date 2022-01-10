@@ -1,0 +1,88 @@
+/* ------------------------------------
+ #      Register Business Section
+ -------------------------------------- */
+ 
+ .edit-post-visual-editor {
+     .delivery {
+         background-color: $color-secondary;
+         position: relative;
+         padding-top: 91px;
+         padding-bottom: 92px;
+
+         .wp-container-30  {
+             margin-top: 0;
+             margin-bottom: 0;
+         }
+
+         .wp-block-column:last-child, .wp-block-columns,
+         .block-editor-block-list__layout, .wp-container-30 {
+             position: static !important;
+         }
+    
+        @include mediaQueriesMinMd {
+            padding-top: 103px;
+            padding-bottom: 205px;
+        }
+    }
+    
+    .delivery__container {
+        @extend .-container;
+    }
+    
+    .delivery__content {
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+        color: $color-lightin;
+        
+        @include mediaQueriesMinMd {
+            flex-direction: row;
+            gap: 56px;
+            align-items: center;
+        }
+    }
+    
+    .delivery__texts {
+        max-width: 489px;
+    
+        @include mediaQueriesMd {
+            order: 1;
+        }
+    }
+    
+    .delivery__img {
+        margin: 0;
+        
+        @include mediaQueriesMinMd {
+            position: absolute;
+            bottom: 0;
+            right: 60px;
+        }
+    
+        @include mediaQueriesMd {
+            order: 2;
+        }
+    }
+    
+    .delivery__title {
+        @extend .-semiBold;
+        font-size: $font-h6;
+        line-height: auto;
+        margin-top: 0;
+        margin-bottom: 20px;
+    
+        @include mediaQueriesMinMd {
+            font-size: $font-h4;
+            margin-bottom: 30px;
+        }
+    }
+    
+    .delivery__text {
+        margin-bottom: $spaceXl;
+    }
+    
+    .delivery__img {
+        max-width: 626px;
+    }
+
+}
