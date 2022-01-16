@@ -1,0 +1,79 @@
+/* ------------------------------------
+ #                Hero
+ -------------------------------------- */
+
+.hero {
+    position: relative;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-image: url('assets/img/bg/bg-sm.svg');
+    background-color: $color-lightin;
+
+    @include mediaQueriesMinMd {
+        padding: 165px 0 220px;
+        background-image: url('assets/img/bg/bg.svg');
+    }
+}
+
+.hero__container {
+    @extend .container;
+}
+
+.hero__content {
+    h1 {
+        @extend .-medium;
+        font-size: $font-h1-small;
+        line-height: 1.3;
+        letter-spacing: -0.04em;
+        color: $color-heading;
+        margin-bottom: 15px;
+        padding-top: 15px;
+
+        em {
+            font-size: 0;
+            line-height: 0;
+        }
+    }
+
+    p {
+        font-family: $font2;
+        font-size: $font-p;
+        line-height: 1.5;
+        color: #656D6B;
+    }
+
+    .wp-block-buttons {
+        margin-top: 15px;
+    }
+
+    @include mediaQueriesMinMd {
+        h1 {
+            font-size: $font-h1;
+            margin-bottom: 18px;
+        }
+
+        p {
+            font-size: $font-h5;
+        }
+
+        .wp-block-buttons {
+            margin-top: 45px;
+        }
+    }
+}
+
+.hero__profile {
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+}
+
+.hero__focus-card {
+    width: 100%;
+    max-width: 220px;
+}
+
+.highlight {
+    width: 100%;
+    max-width: 220px;
+}

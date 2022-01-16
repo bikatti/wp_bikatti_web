@@ -3,48 +3,9 @@
  * Registers options with the Theme Customizer
  *
  * @param      object    $wp_customize    The WordPress Theme Customizer
- * @package    DEP
- * @since      DEP 0.2.6
+ * @package    Bikatti
+ * @since      Bikatti 0.0.1
  */
-
-
-function add_new_customize_texts_theme( $wp_customize ) {
-    // Setting
-    $wp_customize->add_setting( 'dep_id_library',
-    [
-        'default'           => __( 'Id' ),
-        'sanitize_callback' => 'sanitize_text_field',
-        'transport'         => 'refresh',
-    ]);
-    
-    $wp_customize->add_control( 'dep_id_library', 
-    [
-        'type'        => 'text',
-        'priority'    => 10,
-        'section'     => 'dep_filters_logic',
-        'label'       => 'ID de la página de Biblioteca',
-        'description' => 'Coloca el ID que está asociado en la página de Biblioteca. Puedes encontrar el número en el url del post al momento de tratar de editar con Gutenberg la página',
-    ]);
-
-    // Setting
-    $wp_customize->add_setting( 'dep_id_progress',
-    [
-        'default'           => __( 'Id' ),
-        'sanitize_callback' => 'sanitize_text_field',
-        'transport'         => 'refresh',
-    ]);
-    
-    $wp_customize->add_control( 'dep_id_progress', 
-    [
-        'type'        => 'text',
-        'priority'    => 10,
-        'section'     => 'dep_pages',
-        'label'       => 'ID de la página de Avances',
-        'description' => 'Coloca el ID que está asociado en la página de Avances. Puedes encontrar el número en el url del post al momento de tratar de editar con Gutenberg la página',
-    ]);
-}
-
-add_action('customize_register','add_new_customize_texts_theme');
 
 
 
@@ -159,4 +120,4 @@ function customize_home_theme( $wp_customize ) {
     ) );
 }
 
-add_action('customize_register','customize_home_theme');
+// add_action('customize_register','customize_home_theme');

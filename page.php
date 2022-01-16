@@ -3,13 +3,9 @@
  * Default View of Page
  *
  *
- * @package    DEP
- * @since      DEP 0.1.0
+ * @package    Bikatti
+ * @since      Bikatti 0.0.1
  */
-
-if (is_page( 'charlas' )) {
-    $id_news = get_theme_mod( 'dep_id_news' );
-}
 
 get_header();
 ?>
@@ -23,14 +19,6 @@ get_header();
             <article class="page__container">
                 <div class="page__content">
                     <?php 
-                    get_template_part( 
-                        'template-parts/archive/breadcrumbs',
-                        '',
-                        $args = [
-                            'id' => $id_news
-                        ]
-                    ); 
-
                     get_template_part( 'template-parts/post/header' ); 
                     ?>
                     <div class="wp__content"><?php the_content( ); ?></div>

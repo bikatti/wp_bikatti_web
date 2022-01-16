@@ -2,8 +2,82 @@
  #               Header
  -------------------------------------- */
 
-.header__top {
-    .header__column, ul {
-        margin-bottom: 0;
+.header {
+    box-sizing: border-box;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 15;
+    transition: all 300ms ease-out;
+    
+    ul {
+        list-style: none;
+    }
+
+    &.active {
+        background: rgba($color-lightin, $alpha: .7);
+        backdrop-filter: blur(20px);
+        border: 1px solid #f0f2f5;
+    }
+}
+
+
+.header__container {
+    @extend .-container;
+}
+
+.header__menu {
+    padding: 15px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+.header__nav {
+    display: none;
+
+    @include mediaQueriesMinMd {
+        display: block;
+    }
+}
+
+
+
+.header__navbar {
+    a, span {
+        @extend .-medium;
+        cursor: pointer;
+        color: $color-black;
+        font-size: 15px;
+    }
+
+    button {
+        margin-left: 20px;
+    }
+
+    @include mediaQueriesMinMd {
+        display: flex;
+        align-items: center;
+
+        .header__nav {
+            display: flex;
+        }
+    }
+}
+
+
+
+.header__logo {
+    img {
+        max-width: 105px;
+    }
+}
+
+
+.header__nav {
+    li {
+        margin: 0 20px;
     }
 }

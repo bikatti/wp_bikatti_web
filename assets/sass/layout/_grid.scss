@@ -1,7 +1,7 @@
 // Navegación y distribución de la página
 .-container, .container {
     width: 100%;
-    max-width: 1170px;
+    max-width: 1200px;
     padding-right: 15px;
     padding-left: 15px;
     margin-right: auto;
@@ -12,20 +12,6 @@
     }
 }
 
-.container-min-md {
-    @include mediaQueriesMinMd {
-        width: 100%;
-        max-width: 1170px;
-        padding-right: 15px;
-        padding-left: 15px;
-        margin-right: auto;
-        margin-left: auto;
-    }
-
-    @media only screen and (min-width: 1700px) {
-        max-width: 1680px;
-    }
-}
 
 // Margin
 .-mAuto {

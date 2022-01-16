@@ -3,8 +3,8 @@
  * Post (Result of search)
  * 
  * 
- * @package    DEP
- * @since      DEP 0.2.14
+ * @package    Bikatti
+ * @since      Bikatti 0.0.1
  */ 
 
 $category_webinar = get_field('tipo_de_webinar');

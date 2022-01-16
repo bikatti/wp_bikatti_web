@@ -3,8 +3,8 @@
  * Front-page
  *
  *
- * @package    DEP
- * @since      DEP 0.1.0
+ * @package    Bikatti
+ * @since      Bikatti 0.0.1
  */
 
 

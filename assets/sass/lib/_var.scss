@@ -1,35 +1,35 @@
  // colors
-$color-primary: #FF3C4C;
-$color-secondary: #1F84EC;
-$color-calm: #3ABFF0;
-$color-success: #90D039;
-$color-bright: #F8D63C;
+$color-primary: #7F56D9;
+$color-secondary: #027A48;
+$color-calm: #026AA2;
 
 // colors grey
 $color-lightin: #fff;
-$color-lightgrey: #F1F1F1;
+$color-lightgrey: #F9FAFB;
 $color-gray: #CACACA;
 $color-graydark: #888888;
-$color-black: #282828;
+$color-black: #12263A;
+$color-heading: #101828;
 $color-dark: #000;
 
 // fonts
 $font1: 'Inter', sans-serif;
-$font2: 'Gilmer', sans-serif;
+$font2: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
 
 // font-size
-$font-h1: 5.625rem;
-$font-h2: 3rem;
-$font-h2-small: 2.3125rem;
-$font-h3: 2.25rem;
-$font-h3-small: 1.875rem;
-$font-h4: 1.5rem;
-$font-h5: 1.375rem;
+$font-h1: 58px;
+$font-h1-small: 36px;
+$font-h2: 48px;
+$font-h2-small: 45px;
+$font-h3: 30px;
+$font-h3-small: 25px;
+$font-h4: 24px;
+$font-h5: 20px;
 $font-h6: 1.25rem;
-$font-p: 1rem;
-$font-p2: 0.9375rem;
-$font-small: 0.875rem;
-$font-tiny: 0.8125rem;
+$font-p: 16px;
+$font-p2: 15px;
+$font-small: 14px;
+$font-tiny: 12px;
 
 // Border
 $borderBottom: 1px solid $color-gray;

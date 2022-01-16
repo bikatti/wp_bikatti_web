@@ -22,6 +22,7 @@ html {
     
     &::-webkit-scrollbar-thumb {
         background-color: #aaa;
+        border-radius: 30px;
         
         &:hover {
             background-color: #bbb;
@@ -34,6 +35,7 @@ html {
 }
 
 body {
+    color: #FAFBFE;
     overflow-x: hidden;
 
     // Placeholders of the site
@@ -107,35 +109,4 @@ hr {
 // --- Margin Scroll ---
 * {
     scroll-margin-top: 150px;
-}
-
-
-.theBody {
-    @include mediaQueriesMinMd {
-        position: relative;
-
-        &::before {
-            content: '';
-            display: block;
-            // background-size: 100% 100%;
-            background-repeat: no-repeat;
-            background-position: top center;
-            width: 100%;
-            height: -webkit-fill-available;
-            position: absolute;
-            top: -20px;
-            right: 0;
-            left: 0;
-            z-index: -1;
-            // opacity: .3;
-            background-image: url('assets/img/bg/bg-lines.svg');
-            background-color: $color-lightin;
-        }
-    }
-
-    @media only screen and (min-width: 1700px) {
-        &::before {
-            top: -20px;
-        }
-    }
 }

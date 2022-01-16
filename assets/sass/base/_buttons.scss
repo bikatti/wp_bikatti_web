@@ -3,3 +3,64 @@ button {
         outline: none;
     }
 }
+
+.btn, .wp-block-buttons {
+    a, span, .wp-block-button__link {
+        @extend .-semiBold;
+        font-family: $font1;
+        letter-spacing: 0.005em;
+        cursor: pointer;
+        outline: none;
+        font-size: $font-h5;
+        line-height: 1.5;
+        padding: 6px 24px;
+        border-radius: 50px;
+        width: fit-content;
+        display: block;
+        transition: all 0.3s ease-in-out;
+        white-space: nowrap;
+
+        &:hover {
+            outline: none;
+            opacity: .9;
+        }
+    }
+
+    .wp-block-button {
+        margin-bottom: 0;
+    }
+}
+
+.btn--primary {
+    a, span {
+        color: $color-lightin !important;
+        background-color: $color-secondary;
+    }
+}
+
+.btn--transparent {
+    a, span {
+        color: #101828 !important;
+        background-color: transparent;
+    }
+}
+
+.btn--icon {
+    a, span {
+        padding: 6px 0 !important;
+
+        &::before {
+            position: relative;
+            top: -1px;
+            content: '';
+            display: inline-block;
+            background-size: 100% 100%;
+            background-repeat: no-repeat;
+            vertical-align: middle;
+            width: 32px;
+            height: 32px;
+            background-image: url('assets/img/icons/circle.svg');
+            margin-right: 5px;
+        }
+    }
+}

@@ -3,8 +3,8 @@
  * Archive -> home
  * 
  * 
- * @package    DEP
- * @since      DEP 0.2.4
+ * @package    Bikatti
+ * @since      Bikatti 0.0.1
  */ 
 
 get_header( );
