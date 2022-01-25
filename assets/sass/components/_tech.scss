@@ -1,0 +1,72 @@
+/* ------------------------------------
+ #               Tech
+ -------------------------------------- */
+
+.tech {
+    position: relative;
+    z-index: 1;
+    margin-top: -50px;
+    padding-bottom: 120px
+}
+
+.tech__container {
+    @extend .container;
+}
+
+.tech__content {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    border-radius: 16px;
+    background-color: $color-lightgrey;
+    padding: 40px 30px;
+    
+    .blocks-gallery-item {
+        width: auto !important;
+        margin: 0;
+    }
+
+    p {
+        font-size: $font-p2;
+        color: #667085;
+    }
+
+    @include mediaQueriesMd {
+        .blocks-gallery-grid {
+            margin: 0 auto;
+            row-gap: 30px;
+        }
+        
+        .blocks-gallery-item {
+            flex-basis: 30%;
+
+            figure {
+                align-items: center;
+                justify-content: center;
+                width: fit-content;
+                margin: 0 auto;
+            }
+        }
+    }
+    
+    @include mediaQueriesMinMd {
+        padding: 45px 64px;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+
+        .blocks-gallery-grid {
+            flex-wrap: nowrap;
+        }
+
+        .tech__imgs {
+            .wp-block-gallery {
+                justify-content: flex-end;
+            }
+        }
+
+        p {
+            font-size: $font-h5;
+        }
+    }
+}

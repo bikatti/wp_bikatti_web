@@ -1,0 +1,61 @@
+/* ------------------------------------
+ #              Portfolio
+ -------------------------------------- */
+
+.portfolio {
+    position: relative;
+    padding-top: 85px;
+    padding-bottom: 140px;
+
+    @include mediaQueriesMinMd {
+        padding-top: 105px;
+    }
+}
+
+.portfolio__container {
+    @extend .container;
+}
+
+.portfolio__content {
+    h2 {
+        line-height: 1.45;
+        margin-bottom: 15px;
+    }
+
+    p {
+        color: #999999;
+    }
+
+    @include mediaQueriesMinMd {
+        gap: 100px;
+
+        h2 {
+            margin-bottom: 24px;
+        }
+
+        .wp-block-column:first-child {
+            max-width: 400px;
+            position: relative;
+            z-index: 2;
+            background-color: $color-lightin;
+        }
+
+        &::before {
+            content: '';
+            height: 100%;
+            width: 100px;
+            background-color: $color-lightin;
+            position: absolute;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            z-index: 1;
+        }
+    }
+}
+
+.splide--portafolio {
+    .splide__track {
+        overflow: visible;
+    }
+}

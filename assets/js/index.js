@@ -22,29 +22,36 @@ function slideFunc() {
     let github = document.getElementsByClassName( 'splide--portafolio' )
 
     for ( let i = 0; i < github.length; i++ ) {
-        new Splide( github[ i ], {
-            type   : 'loop',
-            perPage: 3,
+        let splide = new Splide( github[ i ], {
+            type   : 'splide',
+            perPage: 1,
             perMove: 1,
-            focus  : 'center',
-            padding: '5rem',
-            autoWidth: true,
+            fixedWidth : '296px',
             autoHeight: true,
             trimSpace: false,
             pagination: false,
             arrows: false,
-            gap: '20px',
+            gap: '25px',
             mediaQuery: 'min',
             breakpoints: {
                 768: {
-                    perPage: 3,
-                    gap: '50px',
+                    perPage: 2,
                 },
             }
-        } ).mount( )
+        } )
+
+        splide.on( 'mounted move', () => {
+            let htmlInsert = document.getElementsByClassName( 'count-index' )[0] 
+
+            htmlInsert.innerHTML = `${splide.index + 1}`
+        } )
+
+        splide.mount()
+
+        let htmlInsert = document.getElementsByClassName( 'count-length' )[0]   
+        htmlInsert.innerHTML = `${splide.length}`
     }
 }
-
 slideFunc()
 
 
@@ -56,3 +63,24 @@ slideFunc()
     onShow: () => theBody.classList.add('-overHidden'),
     onClose: () => theBody.classList.remove('-overHidden'),
 })
+
+
+/* ------------------------------------
+#                Submit
+ -------------------------------------- */
+function messageAlert() {
+    let alertClass = document.getElementsByClassName( 'alert' )
+
+    for (let i = 0; i < alertClass.length; i++) {
+        const alert = alertClass[i];
+        
+        alert.addEventListener( 'click', event => {
+            swal({
+                text: "Pronto disponible",
+                button: false,
+            });
+        }, false )
+    }
+    
+}
+messageAlert()

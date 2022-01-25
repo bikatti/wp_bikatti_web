@@ -1,0 +1,36 @@
+/* ------------------------------------
+ #                About
+ -------------------------------------- */
+
+.about {
+    padding-top: 70px;
+    padding-bottom: 70px;
+
+    @include mediaQueriesMinMd {
+        padding-top: 100px;
+        padding-top: 100px;
+    }
+}
+
+.about__container {
+    @extend .container;
+}
+
+.about__content {
+    gap: 30px;
+
+    h2 {
+        @extend .-semiBold;
+        font-size: $font-h3-small;
+        margin: 20px 0;
+        color: $color-black;
+    }
+
+    @include mediaQueriesMinMd {
+        gap: 15px;
+
+        h2 {
+            font-size: $font-h1-small;
+        }
+    }
+}

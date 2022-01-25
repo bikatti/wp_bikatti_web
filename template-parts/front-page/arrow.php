@@ -1,12 +1,18 @@
 <?php 
 /**
- * Arrows of slep
+ * Arrows
  * 
  *
  * @package    Bikatti
  * @since      Bikatti 0.0.1
  */
 ?>
+
+<div class="splide__numbers">
+    <span class="count-index"></span>
+    /
+    <span class="count-length"></span>
+</div>
 
 <div class="splide__arrows">
     <button class="splide__arrow splide__arrow--prev">

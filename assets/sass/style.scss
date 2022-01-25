@@ -4,7 +4,7 @@ Author: Bikatti
 Author URI: https://github.com/ALAXA-TECH
 Description: Sitio web de presentación de Bikatti
 Requires PHP: 5.7
-Version: 0.0.1
+Version: 0.0.3
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Tags: Landing page, Blog, Sitio Web, Bikatti, CV, Wordpress
@@ -32,11 +32,14 @@ Tags: Landing page, Blog, Sitio Web, Bikatti, CV, Wordpress
 // Page & Custom Post Type
 @import "components/header";
 @import "components/card";
-@import "components/library";
 
 // Home
 @import "components/hero";
-@import "components/featured-news";
+@import "components/tech";
+@import "components/portfolio";
+@import "components/about";
+@import "components/download-cv";
+
 @import "components/footer";
 
 

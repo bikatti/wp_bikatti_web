@@ -16,8 +16,10 @@ $argumentos = array(
 $the_query = new WP_Query($argumentos);
 ?>
 
-<section class="portafolio-github__carousel">
-    <div class="splide splide--portafolio-github">
+<section class="portafolio__carousel">
+    <div class="splide splide--portafolio">
+        <?php get_template_part(  'template-parts/front-page/arrow' ); ?>
+
         <div class="splide__track">
             <ul class="splide__list">
 
@@ -25,26 +27,9 @@ $the_query = new WP_Query($argumentos);
                 if ($the_query->have_posts()) {
                     while ($the_query->have_posts()) {
                         $the_query->the_post(  );
-
-                        $url = get_field('url_github');
-                        $date = get_field('fecha_github');
-                        $type_card = get_field('tipo_de_carta');
                         ?>
                         <li class="splide__slide">
-                            <div class="portafolio-github__item <?php esc_attr_e( $type_card ); ?>">
-                                <a href="<?php echo esc_url( $url ); ?>">
-                                    <div class="bg-gradient"></div>
-                                    <figure>
-                                       <?php the_post_thumbnail( 'full' ); ?>
-                                    </figure>
-                                    <div class="portafolio-github__body">
-                                        <span class="portafolio-github__date">
-                                            <?php esc_html_e( $date ); ?>
-                                        </span>
-                                        <h3><?php the_title( ); ?></h3>
-                                    </div>
-                                </a>
-                            </div>
+                            <?php get_template_part(  'template-parts/archive/post/post-portafolio' ); ?>
                         </li>
                     <?php
                     } 
@@ -52,8 +37,27 @@ $the_query = new WP_Query($argumentos);
 
             </ul>
         </div>
+    </div>
+
+    <div class="portafolio__modals">
         <?php
-        //get_template_part( 'template-parts/front-page/arrow' );
+        if ($the_query->have_posts()) {
+            while ($the_query->have_posts()) {
+                $the_query->the_post(  );
+
+                $protocol = get_field('protocolo');
+                $web = get_field('sitio_web');
+
+                // get_template_part( 
+                //     'template-parts/archive/post/post-modal',
+                //     '',
+                //     $args = [
+                //         'protocol' => $protocol,
+                //         'web' => $web
+                //     ]
+                // );
+            } 
+        } 
         ?>
     </div>
 </section>

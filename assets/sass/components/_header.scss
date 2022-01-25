@@ -35,6 +35,13 @@
     position: relative;
 }
 
+.header__logo {
+    @include mediaQueriesMinMd {
+        flex-basis: 15%;
+        justify-content: space-between;
+    }
+}
+
 .header__nav {
     display: none;
 
@@ -59,7 +66,9 @@
 
     @include mediaQueriesMinMd {
         display: flex;
+        justify-content: space-between;
         align-items: center;
+        flex-basis: 85%;
 
         .header__nav {
             display: flex;

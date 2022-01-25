@@ -18,6 +18,7 @@ function init_template() {
         [
             'header_menu' => 'Menú',
             'contact' => 'Links de contacto',
+            'social_media' => 'Links de social media',
             'footer' => 'Pie de página',
         ]
     );

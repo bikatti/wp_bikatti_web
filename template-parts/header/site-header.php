@@ -30,9 +30,14 @@ $image          = wp_get_attachment_image_src( $custom_logo_id , 'full' );
                     )
                 ); 
                 ?>
-                <button class="btn--outline" data-micromodal-trigger="contact">
-                    <span>Contactar</span>
-                </button>
+                
+                <div class="header__contact">
+                    <span class="alert">Blog</span>
+
+                    <button class="btn btn--primary alert">
+                        <span>Contactar</span>
+                    </button>
+                </div>
             </nav>
         </div><!-- .header__container -->
     </div>

@@ -33,7 +33,7 @@ function topics_init_taxonomy() {
     );
   
     $args = array(
-      'hierarchical'          => false,
+      'hierarchical'          => true,
       'labels'                => $labels,
       'show_ui'               => true,
       'show_in_rest'          => true,
@@ -73,7 +73,7 @@ function tech_init_taxonomy() {
   );
 
   $args = array(
-    'hierarchical'          => false,
+    'hierarchical'          => true,
     'labels'                => $labels,
     'show_ui'               => true,
     'show_in_rest'          => true,

@@ -1,3 +1,98 @@
 /* ------------------------------------
  #                Card
  -------------------------------------- */
+
+ .card {
+    width: 100%;
+    
+    .card__wrap {
+        display: flex;
+        flex-direction: column;
+        background: $color-lightin;
+        // box-shadow: 0px 10px 30px rgba(44, 39, 56, 0.1);
+        position: relative;
+        border-radius: 10px;
+
+        &:hover {
+            box-shadow: rgba(44, 39, 56, 0.1);
+        }
+    }
+
+    .card__img {
+        position: relative;
+        margin: 0;
+        
+        .crop {
+            height: 100%;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+
+            &::after {
+                padding-bottom: 90%;
+            }
+        }
+    }
+
+    .card__header {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 36px 24px 20px; 
+    }
+
+    .card__content {
+        @include lineClamp(3);
+    }
+
+    .card__tag {
+        position: absolute;
+        top: 5px;
+        right: 12px;
+
+        .badge {
+            font-size: 12px !important;
+        }
+    }
+
+    h4 {
+        @include lineClamp(1);
+        font-family: $font1;
+        color: #333;
+    }
+
+    .card__link {
+        @extend .-medium;
+        display: block;
+        font-family: $font1;
+        font-size: $font-small;
+        color: #999;
+        padding-bottom: 18px;
+    }
+
+    .card__bottom {
+        ul {
+            overflow: hidden;
+            display: flex;
+            gap: 5px;
+            list-style: none;
+
+            .badge {
+                padding: 1px 8px;
+                font-size: 11px !important;
+            }
+        }
+    }
+
+    p {
+        font-size: $font-small;
+        letter-spacing: -0.01em;
+        line-height: 1.5;
+        color: #666;
+    }
+    
+    @include mediaQueriesMinMd {
+        .card__header {
+            height: 240px;
+        }
+    }
+}

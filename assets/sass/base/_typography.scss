@@ -7,7 +7,7 @@ ol, li, ul, a, input, label, .-h1, .-h2, .-h3 {
 
 h1, h2, h3, h4, h5, h6 {
     font-family: $font1;
-    @include Font1Weight(7);
+    @include Font1Weight(6);
 }
 
 h2 {
@@ -121,6 +121,11 @@ p {
     padding: 2px 10px;
     border-radius: 20px;
     background-color: #ECFDF3;
+
+    &.purple {
+        color: #3538CD !important;
+        background-color: #EEF4FF;
+    }
 
     @include mediaQueriesMinMd  {
         font-size: $font-small !important;

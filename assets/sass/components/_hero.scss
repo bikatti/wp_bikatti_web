@@ -4,13 +4,13 @@
 
 .hero {
     position: relative;
-    background-size: 100% 100%;
+    background-size: cover;
     background-repeat: no-repeat;
     background-image: url('assets/img/bg/bg-sm.svg');
     background-color: $color-lightin;
 
     @include mediaQueriesMinMd {
-        padding: 165px 0 220px;
+        padding: 165px 0 145px;
         background-image: url('assets/img/bg/bg.svg');
     }
 }
@@ -20,6 +20,8 @@
 }
 
 .hero__content {
+    gap: 130px;
+
     h1 {
         @extend .-medium;
         font-size: $font-h1-small;
@@ -69,11 +71,88 @@
 }
 
 .hero__focus-card {
+    position: relative;
     width: 100%;
     max-width: 220px;
+    overflow: hidden;
+    border-radius: 16px;
+
+    .hero__profile {
+        position: relative;
+        z-index: 1;
+        margin: 0;
+    }
+
+    .hero__focus-card-gradient {
+        position: absolute;
+        left: 0;
+        top: auto;
+        right: 0;
+        bottom: 0;
+        z-index: 0;
+        width: 100%;
+        height: 80%;
+        border-top-left-radius: 16px;
+        border-top-right-radius: 16px;
+        background-image: linear-gradient( 180deg, rgba(133,144,255,.6),rgba(181,155,255,.6) 65%,rgba(245,88,114,.2));
+    }
+
+    .hero__focus-card-person {
+        position: absolute;
+        left: 0;
+        top: auto;
+        right: 0;
+        bottom: 0;
+        z-index: 2;
+        display: flex;
+        width: 100%;
+        height: 100%;
+        padding: 12px;
+        flex-direction: column;
+        justify-content: flex-end;
+        align-items: flex-start;
+        background-image: linear-gradient( 0deg, rgba(14,14,41,.8),rgba(14,14,41,0) 30%);
+
+        h4 {
+            font-weight: 500;
+            font-size: $font-h5;
+        }
+
+        span {
+            font-size: 10.5px;
+            text-transform: uppercase;
+            color: $color-lightin;
+            letter-spacing: .5px;
+        }
+        
+    }
 }
 
 .highlight {
     width: 100%;
     max-width: 220px;
+    padding: 10px;
+    background-color: $color-lightin;
+    border-radius: 8px;
+
+    .wp-block-group__inner-container {
+        display: flex;
+        gap: 8px;
+    }
+
+    figure {
+        max-width: 21px;
+        flex-basis: 30%;
+    }
+
+    p {
+        font-size: $font-tiny;
+        line-height: 1.1;
+    }
+
+    a {
+        text-decoration: underline;
+        font-size: inherit;
+        color: $color-secondary;
+    }
 }
