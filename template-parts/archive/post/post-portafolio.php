@@ -33,9 +33,8 @@ $web = get_field('sitio_web');
             <?php
             foreach($topics as $term) {
                 if(!$term->parent && $term->term_id > 1) {
-                    $color = get_field('color', $term->term_id );
                     ?>
-                    <span class="badge purple"><?php esc_html_e( $term->name ); ?></span>
+                    <span class="badge morado"><?php esc_html_e( $term->name ); ?></span>
                     <?php
                 }
             }
@@ -59,8 +58,9 @@ $web = get_field('sitio_web');
                 <ul>
                 <?php
                 foreach($tecnologias as $term) {
+                    $color = get_field('color', $term );
+
                     if(!$term->parent && $term->term_id > 1) {
-                        $color = get_field('color', $term->term_id );
                         ?>
                         <li><span class="badge <?php esc_attr_e( $color ); ?>"><?php esc_html_e( $term->name ); ?></span></li>
                         <?php

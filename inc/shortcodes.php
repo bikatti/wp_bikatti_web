@@ -37,3 +37,10 @@ function portafolio_block() {
     return ob_get_clean();
 }
 add_shortcode( 'portafolio', 'portafolio_block' );
+
+function projects_img_block() {
+    ob_start();
+    get_template_part( 'template-parts/front-page/projects-img');
+    return ob_get_clean();
+}
+add_shortcode( 'projects-img', 'projects_img_block' );

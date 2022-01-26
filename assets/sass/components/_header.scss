@@ -64,6 +64,13 @@
         margin-left: 20px;
     }
 
+    .btn {
+        span {
+            padding: 3px 16px;
+            background-color: $color-success;
+        }
+    }
+
     @include mediaQueriesMinMd {
         display: flex;
         justify-content: space-between;

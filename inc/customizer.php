@@ -10,6 +10,12 @@
 
 
 function customize_home_theme( $wp_customize ) {
+    $wp_customize->add_panel( 'text_theme_options', 
+    [
+        'priority'       => 100,
+        'title'            => __( 'Personalización del temas' ),
+        'description'      => __( 'Inputs para personalizar textos de la revista digital' ),
+    ]);
 
     $wp_customize->add_section( 'dep_home', 
     [
@@ -19,105 +25,53 @@ function customize_home_theme( $wp_customize ) {
         'active_callback' => 'is_front_page',
     ]);
 
-    // Setting Title 1
-    $wp_customize->add_setting( 'dep_carousel_keys_title_1',
-    [
-        'default'           => __( 'Id' ),
-        'sanitize_callback' => 'sanitize_text_field',
-        'transport'         => 'refresh',
-    ]);
-    
-    $wp_customize->add_control( 'dep_carousel_keys_title_1', 
-    [
-        'type'        => 'text',
-        'priority'    => 10,
-        'section'     => 'dep_home',
-        'label'       => 'Título del slide 1',
-        'description' => 'Coloca el título del slide 1',
-    ]);
-
-    // Setting Text 1
-    $wp_customize->add_setting( 'dep_carousel_keys_text_1',
-    [
-        'default'           => __( 'Id' ),
-        'sanitize_callback' => 'sanitize_text_field',
-        'transport'         => 'refresh',
-    ]);
-    
-    $wp_customize->add_control( 'dep_carousel_keys_text_1', 
-    [
-        'type'        => 'textarea',
-        'priority'    => 10,
-        'section'     => 'dep_home',
-        'label'       => 'Texto del slide 1',
-    ]);
-
     // Setting Image 1
-    $wp_customize->add_setting( 'dep_carousel_keys_img_1',
+    $wp_customize->add_setting( 'dep_hero_img_1',
     [
         'default' => '',
         'transport' => 'refresh',
         'sanitize_callback' => 'esc_url_raw'
     ]);
         
-    $wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, 'dep_carousel_keys_img_1',
+    $wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, 'dep_hero_img_1',
         [
             'label' => __( 'Imagen del slide 1' ),
-            'description' => esc_html__( 'Seleccione la imagen que va a ir de fondo en el carrusel' ),
+            'description' => esc_html__( 'Seleccione la imagen que va a ir de fondo en el hero' ),
             'section' => 'dep_home',
         ]
     ) );
 
-
-
-    // Setting Title 2
-    $wp_customize->add_setting( 'dep_carousel_keys_title_2',
-    [
-        'default'           => __( 'Id' ),
-        'sanitize_callback' => 'sanitize_text_field',
-        'transport'         => 'refresh',
-    ]);
-    
-    $wp_customize->add_control( 'dep_carousel_keys_title_2', 
-    [
-        'type'        => 'text',
-        'priority'    => 10,
-        'section'     => 'dep_home',
-        'label'       => 'Título del slide 2',
-        'description' => 'Coloca el título del slide 2',
-    ]);
-
-    // Setting Text 2
-    $wp_customize->add_setting( 'dep_carousel_keys_text_2',
-    [
-        'default'           => __( 'Id' ),
-        'sanitize_callback' => 'sanitize_text_field',
-        'transport'         => 'refresh',
-    ]);
-    
-    $wp_customize->add_control( 'dep_carousel_keys_text_2', 
-    [
-        'type'        => 'textarea',
-        'priority'    => 10,
-        'section'     => 'dep_home',
-        'label'       => 'Texto del slide 1',
-    ]);
-
     // Setting Image 2
-    $wp_customize->add_setting( 'dep_carousel_keys_img_2',
+    $wp_customize->add_setting( 'dep_hero_img_2',
     [
         'default' => '',
         'transport' => 'refresh',
         'sanitize_callback' => 'esc_url_raw'
     ]);
         
-    $wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, 'dep_carousel_keys_img_2',
+    $wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, 'dep_hero_img_2',
         [
             'label' => __( 'Imagen del slide 2' ),
-            'description' => esc_html__( 'Seleccione la imagen que va a ir de fondo en el carrusel' ),
+            'description' => esc_html__( 'Seleccione la imagen que va a ir de fondo en el hero' ),
+            'section' => 'dep_home',
+        ]
+    ) );
+
+    // Setting Image 3
+    $wp_customize->add_setting( 'dep_hero_img_3',
+    [
+        'default' => '',
+        'transport' => 'refresh',
+        'sanitize_callback' => 'esc_url_raw'
+    ]);
+        
+    $wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, 'dep_hero_img_3',
+        [
+            'label' => __( 'Imagen del slide 3' ),
+            'description' => esc_html__( 'Seleccione la imagen que va a ir de fondo en el hero' ),
             'section' => 'dep_home',
         ]
     ) );
 }
 
-// add_action('customize_register','customize_home_theme');
+add_action('customize_register','customize_home_theme');

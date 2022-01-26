@@ -5,15 +5,17 @@ button {
 }
 
 .btn, .wp-block-buttons {
+    padding: 0;
+
     a, span, .wp-block-button__link {
         @extend .-semiBold;
         font-family: $font1;
         letter-spacing: 0.005em;
         cursor: pointer;
         outline: none;
-        font-size: $font-h5;
+        font-size: $font-p2;
         line-height: 1.5;
-        padding: 6px 24px;
+        padding: 4px 18px;
         border-radius: 50px;
         width: fit-content;
         display: block;
@@ -28,6 +30,13 @@ button {
 
     .wp-block-button {
         margin-bottom: 0;
+    }
+
+    @include mediaQueriesMinMd {
+        a, span, .wp-block-button__link {
+            padding: 6px 24px;
+            font-size: $font-h5;
+        }
     }
 }
 

@@ -42,14 +42,16 @@ function slideFunc() {
 
         splide.on( 'mounted move', () => {
             let htmlInsert = document.getElementsByClassName( 'count-index' )[0] 
+            let actualSlide = splide.index + 1
+            let number = ('0' + actualSlide).slice(-2)
 
-            htmlInsert.innerHTML = `${splide.index + 1}`
+            htmlInsert.innerHTML = number
         } )
-
         splide.mount()
 
-        let htmlInsert = document.getElementsByClassName( 'count-length' )[0]   
-        htmlInsert.innerHTML = `${splide.length}`
+        let htmlInsert = document.getElementsByClassName( 'count-length' )[0]
+        let countSlide = ('0' + splide.length).slice(-2)
+        htmlInsert.innerHTML = countSlide
     }
 }
 slideFunc()

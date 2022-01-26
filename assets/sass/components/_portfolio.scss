@@ -3,22 +3,35 @@
  -------------------------------------- */
 
 .portfolio {
-    position: relative;
     padding-top: 85px;
-    padding-bottom: 140px;
-
+    padding-bottom: 80px;
+    
     @include mediaQueriesMinMd {
         padding-top: 105px;
+        padding-bottom: 140px;
     }
 }
 
 .portfolio__container {
-    @extend .container;
+    position: relative;
+
+    @include mediaQueriesMinMd {
+        width: 100%;
+        max-width: 1200px;
+        padding-right: 15px;
+        padding-left: 15px;
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+    @media only screen and (min-width: 1700px) {
+        max-width: 1680px;
+    }
 }
 
 .portfolio__content {
     h2 {
-        line-height: 1.45;
+        line-height: 1.2;
         margin-bottom: 15px;
     }
 
@@ -26,10 +39,100 @@
         color: #999999;
     }
 
+    .splide {
+        position: static;
+    }
+
+    .splide__numbers {
+        position: relative;
+        top: 0;
+        left: 0;
+        z-index: 10;
+        @extend .-bold;
+        font-family: $font1;
+        color: #ccc;
+        font-size: $font-p;
+
+        .count-index {
+            @extend .-bold;
+            font-family: $font1;
+            font-size: $font-h2;
+            color: $color-secondary;
+        }
+
+        .count-length {
+            @extend .-bold;
+            font-family: $font1;
+            color: #ccc;
+            font-size: $font-p;
+        }
+    }
+
+    .splide__arrows {
+        display: flex;
+        position: absolute;
+        top: 40px;
+        right: 15px;
+        z-index: 10;
+        gap: 24px;
+
+        .splide__arrow {
+            position: static;
+            height: auto;
+            width: auto;
+            padding: 16px;
+            border-radius: 8px;
+            background-color: #0B7441;
+            opacity: 1;
+            transition: all 400ms ease-in;
+                
+            path {
+                fill: #fff;
+                transition: all 400ms ease-in;
+            }
+
+            &[disabled] {
+                background-color: #ECFDF3;
+                
+                path {
+                    fill: #0B7441;
+                }
+            }
+        }
+
+        .splide__arrow--prev svg {
+            transform: scaleX(1);
+        }
+    }
+
+    @include mediaQueriesMd {
+        .wp-block-column:first-child {
+            padding-right: 15px;
+            padding-left: 15px;
+            margin-right: auto;
+            margin-left: auto;
+        }
+
+        .portafolio__carousel {
+            position: relative;
+            margin-top: 60px;
+        }
+
+        .splide__numbers, .splide__arrows {
+            padding-left: 15px;
+        }
+
+        .splide__track {
+            margin-top: 55px;
+            padding-left: 45px !important;
+        }
+    }
+
     @include mediaQueriesMinMd {
         gap: 100px;
 
         h2 {
+            line-height: 1.45;
             margin-bottom: 24px;
         }
 
@@ -40,22 +143,40 @@
             background-color: $color-lightin;
         }
 
-        &::before {
+        &::before, &::after {
             content: '';
             height: 100%;
-            width: 100px;
+            width: 120px;
             background-color: $color-lightin;
             position: absolute;
             top: 0;
-            left: 0;
+            left: -6vw;
             bottom: 0;
             z-index: 1;
+        }
+
+        &::after {
+            left: 30vw;
+        }
+
+        .splide__numbers {
+            position: absolute;
+            top: 50%;
+            left: 15px;
+        }
+
+        .splide__arrows {
+            top: 72%;
+            right: auto;
+            left: 15px;
         }
     }
 }
 
-.splide--portafolio {
-    .splide__track {
-        overflow: visible;
+.splide--portafolio {    
+    @media only screen and (min-width: 1300px) {
+        .splide__track {
+            overflow: visible;
+        }
     }
 }

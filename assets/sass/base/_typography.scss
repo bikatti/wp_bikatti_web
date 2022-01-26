@@ -122,9 +122,28 @@ p {
     border-radius: 20px;
     background-color: #ECFDF3;
 
-    &.purple {
+    &.morado {
         color: #3538CD !important;
         background-color: #EEF4FF;
+    }
+
+    &.azul {
+        color: #026AA2 !important;
+        background-color: #F0F9FF;
+    }
+
+    &.verde {
+        background-color: #ECFDF3;
+    }
+
+    &.rojo {
+        color: #C4320A !important;
+        background-color: #FFF6ED;
+    }
+
+    &.amarillo {
+        color: #F28421 !important;
+        background-color: #FEF3E3;
     }
 
     @include mediaQueriesMinMd  {

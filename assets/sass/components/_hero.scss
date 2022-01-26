@@ -8,6 +8,8 @@
     background-repeat: no-repeat;
     background-image: url('assets/img/bg/bg-sm.svg');
     background-color: $color-lightin;
+    padding: 160px 0 145px;
+    overflow: hidden;
 
     @include mediaQueriesMinMd {
         padding: 165px 0 145px;
@@ -20,7 +22,7 @@
 }
 
 .hero__content {
-    gap: 130px;
+    gap: 20px;
 
     h1 {
         @extend .-medium;
@@ -49,6 +51,8 @@
     }
 
     @include mediaQueriesMinMd {
+        gap: 130px;
+
         h1 {
             font-size: $font-h1;
             margin-bottom: 18px;
@@ -67,7 +71,12 @@
 .hero__profile {
     display: flex;
     flex-direction: column;
+    align-items: center;
     gap: 22px;
+
+    @include mediaQueriesMinMd {
+        align-items: flex-start;
+    }
 }
 
 .hero__focus-card {
@@ -126,6 +135,10 @@
         }
         
     }
+
+    @include mediaQueriesMinMd {
+        z-index: 5;
+    }
 }
 
 .highlight {
@@ -154,5 +167,77 @@
         text-decoration: underline;
         font-size: inherit;
         color: $color-secondary;
+    }
+
+    @include mediaQueriesMd {
+        box-shadow: 0 0 10px rgba($color: #000000, $alpha: .1);
+    } 
+}
+
+
+
+.project-img {
+    position: absolute;
+    content: '';
+    display: inline-block;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    vertical-align: middle;
+    width: 190px;
+    height: 90px;
+    z-index: 1;
+
+    @include mediaQueriesMd {
+        &-1 {
+            top: 45%;
+            left: -70px;
+        }
+    
+        &-2 {
+            width: 150px;
+            height: 79px;
+            top: 35%;
+            right: -120px;
+        }
+    
+        &-3 {
+            top: 88%;
+            left: -70px;
+        }
+    } 
+
+
+    @include mediaQueriesMinMd {
+        width: 350px;
+        height: 170px;
+
+        &-1 {
+            top: 28%;
+            right: -28vw;
+        }
+    
+        &-2 {
+            top: 56%;
+            right: -30vw;
+        }
+    
+        &-3 {
+            top: 84%;
+            right: -36vw;
+        }
+    }
+
+    @media only screen and (min-width: 1300px) {
+        &-1 {
+            right: -70px;
+        }
+    
+        &-2 {
+            right: -120px;
+        }
+    
+        &-3 {
+            right: -280px;
+        }
     }
 }

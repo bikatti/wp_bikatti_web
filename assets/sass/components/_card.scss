@@ -57,6 +57,7 @@
     h4 {
         @include lineClamp(1);
         font-family: $font1;
+        font-size: $font-h4;
         color: #333;
     }
 
@@ -88,6 +89,12 @@
         letter-spacing: -0.01em;
         line-height: 1.5;
         color: #666;
+    }
+
+    @include mediaQueriesMd {
+        .card__bottom {
+            margin-top: 20px;
+        }
     }
     
     @include mediaQueriesMinMd {
